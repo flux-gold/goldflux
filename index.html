@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoldFlux Studio | Dijital Sistemler ve Landing Page Tasarımı</title>
-    <meta name="description" content="GoldFlux Studio ile küçük işletmeler ve freelancerlar için landing page, otomasyon kurulumu, dijital şablon paketleri, prompt tasarımı ve dijital ürün dükkanı.">
+    <title>GoldFlux Studio | Landing Page, Otomasyon ve Dijital Sistemler</title>
 
-    <!-- Performans için font optimizasyonu -->
+    <!-- SEO -->
+    <meta name="description" content="GoldFlux Studio ile küçük işletmeler ve freelancerlar için landing page tasarımı, otomasyon kurulumu, dijital şablon paketleri, freelance prompt tasarımı ve dijital ürün dükkanı çözümleri.">
+    <meta name="keywords" content="landing page, küçük işletme otomasyonu, dijital şablon, Notion, Excel, Canva, prompt tasarımı, dijital ürün, GoldFlux Studio">
+
+    <!-- Open Graph (Paylaşım kartı) -->
+    <meta property="og:title" content="GoldFlux Studio | Küçük İşletmeler ve Freelancerlar için Dijital Sistemler">
+    <meta property="og:description" content="Landing page + otomasyon + dijital şablon + prompt sistemleri ile işini çalışan bir dijital yapıya dönüştür.">
+    <meta property="og:type" content="website">
+    <!-- Gerçek projede bu görseli oluşturup kök dizine koyabilirsin -->
+    <meta property="og:image" content="https://gurrentacar.github.io/goldflux/og-image.png">
+    <meta property="og:url" content="https://gurrentacar.github.io/goldflux/">
+
+    <!-- Favicon (daha sonra ekleyebilirsin) -->
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <!-- Performans için font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -25,6 +39,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -151,13 +169,13 @@
             align-items: center;
             justify-content: center;
             gap: 0.4rem;
-            padding: 0.75rem 1.4rem;
+            padding: 0.8rem 1.6rem;
             border-radius: 999px;
             border: 1px solid transparent;
             font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out, border-color 0.15s ease-out;
+            transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out, border-color 0.15s ease-out, opacity 0.15s ease-out;
             white-space: nowrap;
         }
 
@@ -298,7 +316,18 @@
             font-size: 0.98rem;
             color: var(--text-muted);
             max-width: 32rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-trust-line {
+            font-size: 0.85rem;
+            color: var(--text-muted);
             margin-bottom: 1.4rem;
+        }
+
+        .hero-trust-line span {
+            color: var(--gold);
+            font-weight: 600;
         }
 
         .hero-badges {
@@ -349,12 +378,106 @@
 
         .hero-right {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        /* Mockup */
+        .hero-mockup {
+            background: radial-gradient(circle at top, #3a342b 0, #15181f 55%, #0b0d11 100%);
+            border-radius: 1.4rem;
+            padding: 1rem 1.1rem 1.3rem;
+            border: 1px solid rgba(251, 199, 33, 0.16);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-mockup-screen {
+            border-radius: 0.9rem;
+            border: 1px solid rgba(251, 199, 33, 0.18);
+            background: linear-gradient(145deg, #252b36, #1a1d25);
+            padding: 0.9rem;
+        }
+
+        .hero-mockup-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+            font-size: 0.74rem;
+            color: var(--text-muted);
+        }
+
+        .hero-mockup-dots {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .hero-mockup-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(251, 199, 33, 0.5);
+        }
+
+        .hero-mockup-main {
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .hero-mockup-title {
+            height: 12px;
+            border-radius: 999px;
+            background: linear-gradient(to right, rgba(251, 199, 33, 0.35), transparent);
+            width: 72%;
+        }
+
+        .hero-mockup-lines {
+            display: grid;
+            gap: 0.3rem;
+        }
+
+        .hero-mockup-line {
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .hero-mockup-line:nth-child(2) {
+            width: 80%;
+        }
+
+        .hero-mockup-line:nth-child(3) {
+            width: 60%;
+        }
+
+        .hero-mockup-cta-row {
+            margin-top: 0.4rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .hero-mockup-cta {
+            height: 26px;
+            flex: 1;
+            border-radius: 999px;
+            background: linear-gradient(to right, #fbc721, #f3e39b);
+        }
+
+        .hero-mockup-chip {
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(251, 199, 33, 0.4);
+            font-size: 0.7rem;
+            color: var(--text-muted);
         }
 
         .hero-panel {
             background: radial-gradient(circle at top left, #302F2B 0, #191A1F 50%, #15181F 100%);
             border-radius: 1.4rem;
-            padding: 1.8rem 1.6rem;
+            padding: 1.5rem 1.4rem;
             border: 1px solid rgba(251, 199, 33, 0.16);
             box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
         }
@@ -453,11 +576,25 @@
             border-radius: 1.1rem;
             padding: 1.2rem 1.1rem;
             border: 1px solid rgba(251, 199, 33, 0.12);
+            transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.5);
+            border-color: rgba(251, 199, 33, 0.3);
         }
 
         .card h3 {
             margin-bottom: 0.4rem;
             font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .card h3 span.icon {
+            font-size: 1.1rem;
         }
 
         .card p {
@@ -484,6 +621,37 @@
             left: 0;
             top: 0;
             color: var(--gold);
+        }
+
+        /* TARGET AUDIENCE */
+        .audience-grid {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .audience-card {
+            background: rgba(20, 22, 28, 0.96);
+            border-radius: 1.1rem;
+            padding: 1.1rem 1rem;
+            border: 1px solid rgba(251, 199, 33, 0.12);
+        }
+
+        .audience-label {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .audience-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .audience-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
         }
 
         /* PROCESS */
@@ -521,7 +689,7 @@
             color: var(--text-muted);
         }
 
-        /* PORTFOLIO */
+        /* PORTFOLIO & CASES */
         .portfolio-grid {
             display: grid;
             gap: 1.1rem;
@@ -550,6 +718,44 @@
         .portfolio-item p {
             font-size: 0.88rem;
             color: var(--text-muted);
+        }
+
+        .case-tag {
+            font-size: 0.78rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(251, 199, 33, 0.35);
+            color: var(--gold);
+            display: inline-block;
+            margin-bottom: 0.4rem;
+        }
+
+        .case-metrics {
+            margin-top: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* BEFORE / AFTER */
+        .before-after {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .ba-card {
+            background: rgba(20, 22, 28, 0.96);
+            border-radius: 1.1rem;
+            padding: 1.1rem 1rem;
+            border: 1px solid rgba(251, 199, 33, 0.12);
+            font-size: 0.9rem;
+        }
+
+        .ba-label {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            margin-bottom: 0.3rem;
         }
 
         /* ABOUT / FAQ */
@@ -686,9 +892,98 @@
             resize: vertical;
         }
 
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(20, 22, 28, 0.96);
+            border-radius: 1.1rem;
+            padding: 1rem 1rem;
+            border: 1px solid rgba(251, 199, 33, 0.14);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* BLOG */
+        .blog-grid {
+            display: grid;
+            gap: 1.1rem;
+        }
+
+        .blog-card {
+            background: rgba(20, 22, 28, 0.96);
+            border-radius: 1.1rem;
+            padding: 1rem 1rem;
+            border: 1px solid rgba(251, 199, 33, 0.12);
+            font-size: 0.9rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.02rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .blog-meta {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
         /* MOBILE CTA BAR */
         .mobile-cta-bar {
             display: none;
+        }
+
+        /* DESKTOP FLOATING WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 60;
+            display: none;
+        }
+
+        .floating-whatsapp-button {
+            width: 54px;
+            height: 54px;
+            border-radius: 999px;
+            border: 1px solid rgba(37, 211, 102, 0.55);
+            background: radial-gradient(circle at top, #45ff9a 0, #128c7e 50%, #06261f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .floating-whatsapp-button span {
+            font-size: 1.4rem;
+        }
+
+        .floating-whatsapp-label {
+            position: absolute;
+            right: 62px;
+            bottom: 14px;
+            background: rgba(10, 11, 15, 0.96);
+            color: var(--text-muted);
+            padding: 0.45rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(251, 199, 33, 0.25);
+            font-size: 0.8rem;
+            white-space: nowrap;
         }
 
         /* FOOTER */
@@ -707,6 +1002,13 @@
 
         footer a {
             color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            font-size: 0.82rem;
         }
 
         /* RESPONSIVE */
@@ -731,6 +1033,10 @@
                 grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
+            .audience-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
             .steps {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -747,7 +1053,16 @@
                 grid-template-columns: 1.1fr 1fr;
             }
 
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
             .nav-cta {
+                display: block;
+            }
+
+            .floating-whatsapp {
                 display: block;
             }
         }
@@ -837,10 +1152,12 @@
                 </a>
                 <nav class="nav-links" aria-label="Ana menü">
                     <a href="#services">Hizmetler</a>
+                    <a href="#audience">Kimin İçin?</a>
                     <a href="#packages">Paketler</a>
                     <a href="#shop">Dijital Dükkan</a>
-                    <a href="#process">Süreç</a>
                     <a href="#portfolio">Örnekler</a>
+                    <a href="#testimonials">Yorumlar</a>
+                    <a href="#blog">Blog</a>
                     <a href="#contact">İletişim</a>
                 </nav>
                 <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
@@ -862,16 +1179,20 @@
                 <div class="hero-left">
                     <div class="eyebrow">Landing Page • Otomasyon • Dijital Şablonlar</div>
                     <h1 class="hero-title">
-                        <span>Altın dokunuşla</span> çalışan dijital sistemler ve landing page’ler.
+                        <span>Altın dokunuşla</span> çalışan landing page ve dijital sistemler kuruyorum.
                     </h1>
                     <p class="hero-subtitle">
-                        GoldFlux Studio ile küçük işletmeler ve freelancer’lar için; satış odaklı landing page, otomasyon kurulumu, dijital şablon paketleri ve yapay zekâ destekli sistemler tasarlıyorum.
+                        GoldFlux Studio ile küçük işletmeler ve freelancer’lar için; satış odaklı landing page, otomasyon kurulumu, dijital şablon paketleri ve yapay zekâ destekli prompt sistemleri tasarlıyorum.
+                    </p>
+
+                    <p class="hero-trust-line">
+                        <span>Küçük işletme, freelancer ve dijital ürün üretenler</span> için: dağınık işleri tek bir sistem altında topluyorum.
                     </p>
 
                     <div class="hero-badges">
                         <span class="badge">Dönüşüm odaklı tasarım</span>
-                        <span class="badge">Otomasyon & şablonlar</span>
-                        <span class="badge">Freelance prompt tasarımı</span>
+                        <span class="badge">Küçük işletme otomasyonu</span>
+                        <span class="badge">Freelance prompt sistemleri</span>
                         <span class="badge">Dijital ürün dükkanı</span>
                     </div>
 
@@ -885,7 +1206,7 @@
                     </div>
 
                     <p class="hero-note">
-                        <span>Not:</span> Sadece tasarım yapmıyorum; işine uygun <strong>çalışan sistem</strong> kuruyorum. Landing page + otomasyon + şablon + AI.
+                        <span>Not:</span> Sadece tasarım yapmıyorum; işine uygun <strong>çalışan dijital sistem</strong> kuruyorum. Landing page + otomasyon + şablon + AI.
                     </p>
 
                     <p class="contact-inline">
@@ -896,6 +1217,32 @@
                 </div>
 
                 <div class="hero-right">
+                    <!-- Mockup -->
+                    <div class="hero-mockup" aria-hidden="true">
+                        <div class="hero-mockup-screen">
+                            <div class="hero-mockup-topbar">
+                                <div class="hero-mockup-dots">
+                                    <div class="hero-mockup-dot"></div>
+                                    <div class="hero-mockup-dot" style="opacity:0.6;"></div>
+                                    <div class="hero-mockup-dot" style="opacity:0.3;"></div>
+                                </div>
+                                <div>goldflux.studio</div>
+                            </div>
+                            <div class="hero-mockup-main">
+                                <div class="hero-mockup-title"></div>
+                                <div class="hero-mockup-lines">
+                                    <div class="hero-mockup-line"></div>
+                                    <div class="hero-mockup-line"></div>
+                                    <div class="hero-mockup-line"></div>
+                                </div>
+                                <div class="hero-mockup-cta-row">
+                                    <div class="hero-mockup-cta"></div>
+                                    <div class="hero-mockup-chip">Landing Page</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- “Hizmet Özeti” Paneli -->
                     <div class="hero-panel">
                         <div class="panel-heading">
@@ -906,13 +1253,13 @@
                             <div class="panel-item">
                                 <div class="panel-item-label">Ne Yapıyorum?</div>
                                 <div class="panel-item-value">
-                                    Landing page tasarımı, otomasyon kurulumu, dijital şablon paketleri ve <span>freelance prompt tasarımı</span>.
+                                    Landing page tasarımı, küçük işletme otomasyonu, dijital şablon paketleri ve <span>freelance prompt sistemleri</span>.
                                 </div>
                             </div>
                             <div class="panel-item">
                                 <div class="panel-item-label">Kimler İçin?</div>
                                 <div class="panel-item-value">
-                                    Küçük işletmeler, freelancer’lar, koçlar, eğitmenler ve dijital ürün satanlar.
+                                    Küçük işletmeler, freelancer’lar, koçlar, eğitmenler, ajanslar ve dijital ürün satanlar.
                                 </div>
                             </div>
                             <div class="panel-item">
@@ -939,20 +1286,63 @@
 
         <div class="divider"></div>
 
+        <!-- TARGET AUDIENCE -->
+        <section id="audience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Kimin İçin Çalışıyorum?</h2>
+                    <p class="section-subtitle">
+                        GoldFlux Studio; küçük işletme, freelancer ve dijital ürün üretenler için tasarlandı.
+                    </p>
+                </div>
+
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-label">Küçük İşletmeler</div>
+                        <h3>Telefonu çalan, düzenli müşteri akışı isteyenler için</h3>
+                        <p>
+                            Randevu, hizmet veya ürün satan işletmelerin; landing page + WhatsApp + otomasyon ile
+                            daha düzenli ve takip edilebilir bir sistem kurmasına yardımcı oluyorum.
+                        </p>
+                    </div>
+
+                    <div class="audience-card">
+                        <div class="audience-label">Freelancer & Koçlar</div>
+                        <h3>“Kaos değil sistem” diyen serbest çalışanlar için</h3>
+                        <p>
+                            Teklif, müşteri ve proje takibini; Notion, şablonlar ve AI prompt setleri ile düzenleyerek
+                            serbest çalışanların daha profesyonel ve hızlı çalışmasını sağlıyorum.
+                        </p>
+                    </div>
+
+                    <div class="audience-card">
+                        <div class="audience-label">Dijital Ürün Satanlar</div>
+                        <h3>Şablon, eğitim, ürün satan içerik üreticileri için</h3>
+                        <p>
+                            Dijital ürün dükkanı yapısı, satış sayfaları, upsell/cross-sell akışları ve içerik planları ile
+                            daha sistemli ve ölçeklenebilir bir dijital gelir modeli kurmana destek oluyorum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
         <!-- SERVICES: Dijital Çözümler -->
         <section id="services">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Hizmetlerim & Dijital Çözümler</h2>
                     <p class="section-subtitle">
-                        Küçük işletmeler, freelancer’lar ve dijital ürün satanlar için; landing page, otomasyon, dijital şablonlar ve
-                        yapay zekâ destekli sistemler kuruyorum.
+                        Küçük işletmeler, freelancer’lar ve dijital ürün satanlar için; landing page, otomasyon,
+                        dijital şablonlar ve yapay zekâ destekli sistemler kuruyorum.
                     </p>
                 </div>
 
                 <div class="cards">
                     <article class="card">
-                        <h3>Küçük İşletmeler İçin Otomasyon Kurulumu</h3>
+                        <h3><span class="icon">⚡</span>Küçük İşletmeler İçin Otomasyon Kurulumu</h3>
                         <p>
                             Tekrarlayan işlerini otomatikleştiriyorum. Mail, randevu, form ve takip süreçleri senin yerine sistem tarafından yönetilsin.
                         </p>
@@ -964,9 +1354,10 @@
                     </article>
 
                     <article class="card">
-                        <h3>Dijital Şablon Paketleri (Notion, Excel, Canva)</h3>
+                        <h3><span class="icon">📁</span>Dijital Şablon Paketleri (Notion, Excel, Canva)</h3>
                         <p>
-                            İşini düzenlemek ve hızlandırmak için hazır dijital şablon paketleri: içerik takvimi, müşteri takibi, iş planı ve daha fazlası.
+                            İşini düzenlemek ve hızlandırmak için hazır dijital şablon paketleri: içerik takvimi, müşteri takibi,
+                            iş planı ve daha fazlası.
                         </p>
                         <ul>
                             <li>Notion, Excel, Canva için hazır setler</li>
@@ -976,9 +1367,10 @@
                     </article>
 
                     <article class="card">
-                        <h3>Freelance Prompt Tasarımı</h3>
+                        <h3><span class="icon">🤖</span>Freelance Prompt Tasarımı</h3>
                         <p>
-                            ChatGPT ve yapay zeka araçları için işine özel prompt sistemleri kuruyorum. Tek tıkla tekrar tekrar kullanabileceğin akıllı kalıplar.
+                            ChatGPT ve yapay zeka araçları için işine özel prompt sistemleri kuruyorum. Tek tıkla tekrar tekrar
+                            kullanabileceğin akıllı kalıplar.
                         </p>
                         <ul>
                             <li>Freelancer ve ajanslar için özel prompt setleri</li>
@@ -988,7 +1380,7 @@
                     </article>
 
                     <article class="card">
-                        <h3>Dijital Ürün Dükkanı Kurulumu</h3>
+                        <h3><span class="icon">🛒</span>Dijital Ürün Dükkanı Kurulumu</h3>
                         <p>
                             Landing page, ürün sayfaları ve dijital şablonlarınla küçük ama etkili bir dijital ürün dükkanı kurmana yardımcı oluyorum.
                         </p>
@@ -1062,7 +1454,7 @@
                 <div class="cards">
                     <!-- STARTER -->
                     <article class="card">
-                        <h3>Starter Paket</h3>
+                        <h3><span class="icon">🌱</span>Starter Paket</h3>
                         <p><strong>Önerilen fiyat:</strong> 2.500 ₺ – 4.000 ₺</p>
                         <p>
                             İlk adımını atmak isteyenler için ideal başlangıç paketi. Profesyonel, mobil uyumlu ve dönüşüm odaklı bir landing page ile
@@ -1080,7 +1472,7 @@
                     <!-- PRO -->
                     <article class="card">
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
-                            <h3 style="margin-bottom:0;">Pro Paket</h3>
+                            <h3 style="margin-bottom:0;"><span class="icon">🚀</span>Pro Paket</h3>
                             <span class="badge">En çok tercih edilen</span>
                         </div>
                         <p><strong>Önerilen fiyat:</strong> 6.000 ₺ – 9.000 ₺</p>
@@ -1102,7 +1494,7 @@
 
                     <!-- STUDIO -->
                     <article class="card">
-                        <h3>Studio Paket</h3>
+                        <h3><span class="icon">🎛️</span>Studio Paket</h3>
                         <p><strong>Önerilen fiyat:</strong> 10.000 ₺ – 18.000 ₺</p>
                         <p>
                             Dijital işini A’dan Z’ye kurmak isteyenler için en kapsamlı paket. Hem vitrinini hem de arkadaki sistemi beraber tasarlıyorum.
@@ -1143,7 +1535,7 @@
                 <div class="cards">
                     <!-- Ürün 1 -->
                     <article class="card">
-                        <h3>Notion İşletme Kontrol Paneli</h3>
+                        <h3><span class="icon">📊</span>Notion İşletme Kontrol Paneli</h3>
                         <p>
                             Küçük işletmeler için müşteri, iş ve gelir takibini tek ekranda toplayan Notion kontrol paneli.
                         </p>
@@ -1157,7 +1549,7 @@
 
                     <!-- Ürün 2 -->
                     <article class="card">
-                        <h3>Freelancer Dijital Düzen Paketi</h3>
+                        <h3><span class="icon">📄</span>Freelancer Dijital Düzen Paketi</h3>
                         <p>
                             Fiyat listesi, teklif metni, sözleşme ve proje takip şablonlarından oluşan temel düzen paketi.
                         </p>
@@ -1171,7 +1563,7 @@
 
                     <!-- Ürün 3 -->
                     <article class="card">
-                        <h3>AI Prompt Paketleri (İşine Özel)</h3>
+                        <h3><span class="icon">🧠</span>AI Prompt Paketleri (İşine Özel)</h3>
                         <p>
                             ChatGPT ve benzeri araçlar için; içerik, mail, teklif ve sosyal medya odaklı kullanabileceğin hazır prompt setleri.
                         </p>
@@ -1185,7 +1577,7 @@
 
                     <!-- Ürün 4 -->
                     <article class="card">
-                        <h3>Canva Sosyal Medya Şablon Seti</h3>
+                        <h3><span class="icon">🎨</span>Canva Sosyal Medya Şablon Seti</h3>
                         <p>
                             Instagram feed ve story paylaşımların için markana göre düzenlenebilir Canva şablon seti.
                         </p>
@@ -1199,7 +1591,7 @@
 
                     <!-- Ürün 5 -->
                     <article class="card">
-                        <h3>Landing Page Performans Raporu</h3>
+                        <h3><span class="icon">📈</span>Landing Page Performans Raporu</h3>
                         <p>
                             Mevcut sayfanın hız, tasarım, metin ve dönüşüm açısından analiz edildiği, uygulanabilir öneriler içeren rapor.
                         </p>
@@ -1222,13 +1614,16 @@
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
+        <div class="divider"></div>
+
+        <!-- PORTFOLIO & CASE STUDIES -->
         <section id="portfolio">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Örnek Çalışma Türleri</h2>
+                    <h2 class="section-title">Örnek Çalışma Türleri & Mini Case’ler</h2>
                     <p class="section-subtitle">
-                        Aşağıda, hazırlayabileceğim landing page ve dijital sistem türlerine örnekler görebilirsin. Gerçek projelerini ekledikçe burayı güncelleyebilirsin.
+                        Aşağıda, hazırlayabileceğim landing page ve dijital sistem türlerine örnekler ve senaryolar görebilirsin.
+                        Gerçek projelerini ekledikçe burayı güncelleyebilirsin.
                     </p>
                 </div>
 
@@ -1250,6 +1645,61 @@
                         <h3>Eğitim / Kurs Satış Sayfası</h3>
                         <p>Ders, mentorluk veya online kurslar için detaylı ve ikna edici satış sayfaları.</p>
                     </div>
+
+                    <!-- Mini Case 1 -->
+                    <div class="portfolio-item">
+                        <span class="case-tag">Örnek Senaryo</span>
+                        <h3>Freelancer İçin Notion + Landing Page Sistemi</h3>
+                        <p>
+                            Tek başına çalışan bir tasarımcı için; portföy odaklı landing page + Notion müşteri takibi + teklif şablonları ve AI destekli mail prompt’ları ile
+                            dağınık iş akışı tek bir sistemde toplandı.
+                        </p>
+                        <div class="case-metrics">
+                            Sonuç: Daha düzenli takip, daha profesyonel görünüm, teklif hazırlama süresinde ciddi azalma.
+                        </div>
+                    </div>
+
+                    <!-- Mini Case 2 -->
+                    <div class="portfolio-item">
+                        <span class="case-tag">Örnek Senaryo</span>
+                        <h3>Küçük Klinik İçin Randevu Otomasyonu</h3>
+                        <p>
+                            Küçük bir klinik için; randevu formu → Google Sheets → otomatik mail / WhatsApp bilgilendirmesi ile
+                            manuel yazışmalar azaltıldı, randevu süreci daha şeffaf ve hızlı hale getirildi.
+                        </p>
+                        <div class="case-metrics">
+                            Sonuç: Aynı ekip ile daha fazla randevu yönetimi ve daha az karışıklık.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEFORE / AFTER SECTION -->
+        <section id="before-after">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Önce / Sonra: GoldFlux ile Ne Değişiyor?</h2>
+                    <p class="section-subtitle">
+                        Tipik bir küçük işletme veya freelancer’ın dijitaldeki dağınık hâlini, çalışan bir sisteme dönüştürüyorum.
+                    </p>
+                </div>
+
+                <div class="before-after">
+                    <div class="ba-card">
+                        <div class="ba-label">Önce</div>
+                        <p>
+                            Her proje için sıfırdan yazılan mesajlar, karışık WhatsApp konuşmaları, kaybolan notlar, hatırlanmayan teslim tarihleri,
+                            sürekli ertelenen “site yaptırma” planı ve net olmayan bir online vitrin...
+                        </p>
+                    </div>
+                    <div class="ba-card">
+                        <div class="ba-label">Sonra</div>
+                        <p>
+                            Net bir landing page, belirlenmiş paketler, Notion veya Excel üzerinde açıklayıcı panolar, hazır prompt ve şablonlarla
+                            hızlanan iş akışı, düzenli teklif ve fatura süreçleri, daha profesyonel bir online görünüm.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1266,13 +1716,13 @@
                     </div>
 
                     <div class="highlight-box">
-                        Landing page’in; logo ve renklerden ibaret olmadığını biliyorum. Amacım:
+                        Sadece “güzel görünen” tasarımlar değil, pratikte işini kolaylaştıran sistemler kurmaya odaklanıyorum:
                         <ul>
-                            <li>Ziyaretçiyi tek bir hedefe yönlendirmek</li>
-                            <li>Müşterinin güvenini hızla kazanmak</li>
+                            <li>Ziyaretçiyi tek bir hedefe yönlendiren sayfa akışları</li>
+                            <li>Müşterinin güvenini hızla kazandıran metin ve yapı</li>
                             <li>Reklam maliyetini boşa harcamadan dönüşüm almak</li>
-                            <li>Her sektöre uygun, esnek yapılar kurmak</li>
-                            <li>Arka planda çalışan, seni yormayan dijital sistemler kurmak</li>
+                            <li>Her sektöre uygun, esnek ve tekrar kullanılabilir yapılar</li>
+                            <li>Arka planda çalışan, seni yormayan otomasyonlar ve dijital sistemler</li>
                         </ul>
                     </div>
                 </div>
@@ -1303,6 +1753,102 @@
                             Basit bir landing page genellikle birkaç gün içinde hazır olur. Daha detaylı sistem ve paketlerde süre değişebilir, bunu başta netleştiriyoruz.
                         </p>
                     </details>
+
+                    <details>
+                        <summary>Revizyon hakkım var mı?</summary>
+                        <p>
+                            Starter paket için 1, Pro ve Studio paketler için 2 tur revizyon hakkı tanımlıyorum. Daha fazlası gerektiğinde, proje bazlı ek çalışma olarak konuşuyoruz.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Ödeme nasıl yapılıyor?</summary>
+                        <p>
+                            Genelde proje başlamadan önce bir kısmı, proje onayında kalan kısmı olacak şekilde iki aşamalı ödeme planı uyguluyorum. Detayları teklif aşamasında konuşuyoruz.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Müşteri Yorumları (Örnek)</h2>
+                    <p class="section-subtitle">
+                        Aşağıdaki yorumlar format örneği olarak hazırlanmıştır. Kendi gerçek müşterilerinden geri bildirim aldıkça burayı güncelleyebilirsin.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-name">Merve K. (Örnek)</div>
+                        <div class="testimonial-role">Freelance Grafik Tasarımcı</div>
+                        <p>
+                            “GoldFlux ile çalıştıktan sonra hem landing page’im hem de Notion sistemim oturdu.
+                            Teklif, fatura ve müşteri takibini tek ekrandan yönetiyorum. Günüm çok daha düzenli geçiyor.”
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-name">Ali Y. (Örnek)</div>
+                        <div class="testimonial-role">Küçük Klinik Sahibi</div>
+                        <p>
+                            “Randevu otomasyonu ve WhatsApp akışı sayesinde, hastalarla yazışma yükü çok azaldı.
+                            Artık kim, ne zaman, hangi işlem için gelecek net olarak görünüyor.”
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-name">Senin Müşterin</div>
+                        <div class="testimonial-role">Buraya gerçek yorum eklenebilir</div>
+                        <p>
+                            Burayı, ileride müşterilerinden alacağın gerçek yorumlarla güncelleyebilirsin. Kısa, net ve somut fayda içeren cümleler en iyi sonucu verir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG / MINI İÇERİKLER -->
+        <section id="blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mini Blog: Dijital Sistem Notları</h2>
+                    <p class="section-subtitle">
+                        Kısa ama işine yarayacak içerikleri buradan ekleyebilirsin. Aşağıdaki yazılar başlangıç için örnek metinlerdir.
+                    </p>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3>Küçük İşletmeler İçin 3 Basit Otomasyon Fikri</h3>
+                        <div class="blog-meta">Mini rehber • Otomasyon</div>
+                        <p>
+                            1) Form → Google Sheets → Mail bildirimi. <br>
+                            2) Sık sorulan sorular için hazır WhatsApp cevapları. <br>
+                            3) Randevu veya kontrol tarihlerine hatırlatma ekleyen basit takvim entegrasyonları.
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Freelancer’lar Neden “Sistem” Kurmalı?</h3>
+                        <div class="blog-meta">Mini rehber • Freelancer</div>
+                        <p>
+                            Her proje için her şeyi sıfırdan düşünmek yerine, teklif şablonu, fatura taslağı, proje planı ve içerik prompt’ları ile
+                            tekrar eden işleri otomatikleştirmek, üretkenliği direkt artırır.
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Tek Sayfa (Landing Page) Bazen Neden Yeter?</h3>
+                        <div class="blog-meta">Mini rehber • Landing Page</div>
+                        <p>
+                            Eğer tek bir ana hizmetin, bir ana ürünün veya kampanyan varsa; kullanıcıyı dağıtmadan tek sayfada bütün ikna sürecini
+                            kurmak çoğu zaman çok sayfalı sitelerden daha verimli olabilir.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -1328,6 +1874,7 @@
                             <li>Hangi sektörde olduğun</li>
                             <li>Ne satmak / ne tanıtmak istediğin</li>
                             <li>Reklam verip vermediğin</li>
+                            <li>Yaklaşık bütçe aralığın (tahmini bile olabilir)</li>
                         </ul>
                     </div>
 
@@ -1370,11 +1917,32 @@
         </a>
     </div>
 
+    <!-- MASAÜSTÜ WHATSAPP BALONU -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/905421239770?text=Merhaba%20Hüseyin%2C%20GoldFlux%20Studio%20hizmetleri%20i%C3%A7in%20ileti%C5%9Fime%20ge%C3%A7iyorum." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile hızlı iletişim">
+            <div class="floating-whatsapp-button">
+                <span>💬</span>
+            </div>
+            <div class="floating-whatsapp-label">
+                WhatsApp’tan yaz
+            </div>
+        </a>
+    </div>
+
     <!-- FOOTER -->
     <footer>
         <div class="container footer-inner">
             <div>© <span id="year"></span> GoldFlux Studio • Tüm hakları saklıdır.</div>
             <div>Hazırlayan: Hüseyin Elaldı • <a href="https://instagram.com/huseyinelald1" target="_blank" rel="noopener noreferrer">@huseyinelald1</a></div>
+            <div class="footer-links">
+                <a href="#services">Hizmetler</a>
+                <a href="#packages">Paketler</a>
+                <a href="#shop">Dijital Dükkan</a>
+                <a href="#portfolio">Örnekler</a>
+                <a href="#testimonials">Yorumlar</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">İletişim</a>
+            </div>
         </div>
     </footer>
 
